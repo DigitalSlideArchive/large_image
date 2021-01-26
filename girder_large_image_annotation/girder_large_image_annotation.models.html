@@ -1,0 +1,799 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>girder_large_image_annotation.models package &mdash; large_image  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="girder_large_image_annotation.rest package" href="girder_large_image_annotation.rest.html" />
+    <link rel="prev" title="girder_large_image_annotation package" href="girder_large_image_annotation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> large_image
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tilesource_options.html">Tile Source Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image/modules.html">large_image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_dummy/modules.html">large_image_source_dummy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_gdal/modules.html">large_image_source_gdal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_mapnik/modules.html">large_image_source_mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_nd2/modules.html">large_image_source_nd2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_ometiff/modules.html">large_image_source_ometiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_openjpeg/modules.html">large_image_source_openjpeg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_openslide/modules.html">large_image_source_openslide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_pil/modules.html">large_image_source_pil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_test/modules.html">large_image_source_test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_tiff/modules.html">large_image_source_tiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_converter/modules.html">large_image_converter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_tasks/modules.html">large_image_tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../girder_large_image/modules.html">girder_large_image</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">girder_large_image_annotation</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="girder_large_image_annotation.html">girder_large_image_annotation package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="girder_large_image_annotation.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">girder_large_image_annotation.models package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="girder_large_image_annotation.rest.html">girder_large_image_annotation.rest package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="girder_large_image_annotation.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="girder_large_image_annotation.html#module-girder_large_image_annotation.constants">girder_large_image_annotation.constants module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="girder_large_image_annotation.html#module-girder_large_image_annotation">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">large_image</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">girder_large_image_annotation</a> &raquo;</li>
+        
+          <li><a href="girder_large_image_annotation.html">girder_large_image_annotation package</a> &raquo;</li>
+        
+      <li>girder_large_image_annotation.models package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/girder_large_image_annotation/girder_large_image_annotation.models.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="girder-large-image-annotation-models-package">
+<h1>girder_large_image_annotation.models package<a class="headerlink" href="#girder-large-image-annotation-models-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-girder_large_image_annotation.models.annotation">
+<span id="girder-large-image-annotation-models-annotation-module"></span><h2>girder_large_image_annotation.models.annotation module<a class="headerlink" href="#module-girder_large_image_annotation.models.annotation" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="girder_large_image_annotation.models.annotation.Annotation">
+<em class="property">class </em><code class="sig-prename descclassname">girder_large_image_annotation.models.annotation.</code><code class="sig-name descname">Annotation</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">girder.models.model_base.AccessControlledModel</span></code></p>
+<p>This model is used to represent an annotation that is associated with an
+item.  The annotation can contain any number of annotationelements, which
+are included because they reference this annoation as a parent.  The
+annotation acts like these are a native part of it, though they are each
+stored as independent models to (eventually) permit faster spatial
+searching.</p>
+<dl class="py class">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.Skill">
+<em class="property">class </em><code class="sig-name descname">Skill</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.Skill"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.Skill" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<p>An enumeration.</p>
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.Skill.EXPERT">
+<code class="sig-name descname">EXPERT</code><em class="property"> = 'expert'</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.Skill.EXPERT" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.Skill.NOVICE">
+<code class="sig-name descname">NOVICE</code><em class="property"> = 'novice'</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.Skill.NOVICE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.baseFields">
+<code class="sig-name descname">baseFields</code><em class="property"> = ('_id', 'itemId', 'creatorId', 'created', 'updated', 'updatedId', 'public', 'publicFlags', 'groups')</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.baseFields" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.createAnnotation">
+<code class="sig-name descname">createAnnotation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">item</span></em>, <em class="sig-param"><span class="n">creator</span></em>, <em class="sig-param"><span class="n">annotation</span></em>, <em class="sig-param"><span class="n">public</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.createAnnotation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.createAnnotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.findAnnotatedImages">
+<code class="sig-name descname">findAnnotatedImages</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">imageNameFilter</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">creator</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">level</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">offset</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">limit</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">sort</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.findAnnotatedImages"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.findAnnotatedImages" title="Permalink to this definition">¶</a></dt>
+<dd><p>Find images associated with annotations.</p>
+<p>The list returned by this function is paginated and filtered by access control using
+the standard girder kwargs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>imageNameFilter</strong> – A string used to filter images by name.  An image name matches
+if it (or a subtoken) begins with this string.  Subtokens are generated by splitting
+by the regex <code class="docutils literal notranslate"><span class="pre">[\W_]+</span></code>  This filter is case-insensitive.</p></li>
+<li><p><strong>creator</strong> – Filter by a user who is the creator of the annotation.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.getVersion">
+<code class="sig-name descname">getVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotationId</span></em>, <em class="sig-param"><span class="n">version</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.getVersion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.getVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get an annotation history version.  This reconstructs the original
+annotation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annotationId</strong> – the annotation to get history for.</p></li>
+<li><p><strong>version</strong> – the specific version to get.</p></li>
+<li><p><strong>user</strong> – the Girder user.  If the user is not an admin, they must
+have read access on the item and the item must exist.</p></li>
+<li><p><strong>force</strong> – if True, don’t get the user access.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.idRegex">
+<code class="sig-name descname">idRegex</code><em class="property"> = re.compile('^[0-9a-f]{24}$')</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.idRegex" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.initialize">
+<code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subclasses should override this and set the name of the collection as
+self.name. Also, they should set any indexed fields that they require.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.injectAnnotationGroupSet">
+<code class="sig-name descname">injectAnnotationGroupSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotation</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.injectAnnotationGroupSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.injectAnnotationGroupSet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.load">
+<code class="sig-name descname">load</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">getElements</span><span class="o">=</span><span class="default_value">True</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.load"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load an annotation, adding all or a subset of the elements to it.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>region</strong> – if present, a dictionary restricting which annotations
+are returned.  See annotationelement.getElements.</p></li>
+<li><p><strong>getElements</strong> – if False, don’t get elements associated with this
+annotation.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the matching annotation or none.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.numberInstance">
+<code class="sig-name descname">numberInstance</code><em class="property"> = (&lt;class 'int'&gt;, &lt;class 'float'&gt;)</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.numberInstance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.remove">
+<code class="sig-name descname">remove</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotation</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.remove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.remove" title="Permalink to this definition">¶</a></dt>
+<dd><p>When removing an annotation, remove all element associated with it.
+This overrides the collection delete_one method so that all of the
+triggers are fired as expected and cancelling from an event will work
+as needed.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>annotation</strong> – the annotation document to remove.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.removeOldAnnotations">
+<code class="sig-name descname">removeOldAnnotations</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">remove</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">minAgeInDays</span><span class="o">=</span><span class="default_value">30</span></em>, <em class="sig-param"><span class="n">keepInactiveVersions</span><span class="o">=</span><span class="default_value">5</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.removeOldAnnotations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.removeOldAnnotations" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove annotations that (a) have no item or (b) are inactive and at
+least (1) a minimum age in days and (2) not the most recent inactive
+versions.  Also remove any annotation elements that don’t have
+associated annotations and are a minimum age in days.
+:param remove: if False, just report on what would be done.  If true,</p>
+<blockquote>
+<div><p>actually remove the annotations and compact the collections.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>minAgeInDays</strong> – only work on annotations that are at least this
+old.  This must be greater than or equal to 7.</p></li>
+<li><p><strong>keepInactiveVersions</strong> – keep at least this many inactive versions
+of any annotation, regardless of age.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.revertVersion">
+<code class="sig-name descname">revertVersion</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">id</span></em>, <em class="sig-param"><span class="n">version</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.revertVersion"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.revertVersion" title="Permalink to this definition">¶</a></dt>
+<dd><p>Revert to a previous version of an annotation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>id</strong> – the annotation id.</p></li>
+<li><p><strong>version</strong> – the version to revert to.  None reverts to the previous
+version.  If the annotation was deleted, this is the most recent
+version.</p></li>
+<li><p><strong>user</strong> – the user doing the reversion.</p></li>
+<li><p><strong>force</strong> – if True don’t authenticate the user with the associated
+item access.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotation</span></em>, <em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.save" title="Permalink to this definition">¶</a></dt>
+<dd><p>When saving an annotation, override the collection insert_one and
+replace_one methods so that we don’t save the elements with the main
+annotation.  Still use the super class’s save method, so that all of
+the triggers are fired as expected and cancelling and modifications can
+be done as needed.</p>
+<p>Because Mongo doesn’t support transactions, a version number is stored
+with the annotation and with the associated elements.  This is used to
+add the new elements first, then update the annotation, and delete the
+old elements.  The allows version integrity if another thread queries
+the annotation at the same time.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>annotation</strong> – the annotation document to save.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the saved document.  If it is a new document, the _id has
+been added.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.setAccessList">
+<code class="sig-name descname">setAccessList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">doc</span></em>, <em class="sig-param"><span class="n">access</span></em>, <em class="sig-param"><span class="n">save</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.setAccessList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.setAccessList" title="Permalink to this definition">¶</a></dt>
+<dd><p>The super class’s setAccessList function can save a document.  However,
+annotations which have not loaded elements lose their elements when
+this occurs, because the validation step of the save function adds an
+empty element list.  By using an update instead of a save, this
+prevents the problem.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.updateAnnotation">
+<code class="sig-name descname">updateAnnotation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotation</span></em>, <em class="sig-param"><span class="n">updateUser</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.updateAnnotation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.updateAnnotation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Update an annotation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annotation</strong> – the annotation document to update.</p></li>
+<li><p><strong>updateUser</strong> – the user who is creating the update.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>the annotation document that was updated.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.validate">
+<code class="sig-name descname">validate</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">doc</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.validate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Models should implement this to validate the document before it enters
+the database. It must return the document with any necessary filters
+applied, or throw a ValidationException if validation of the document
+fails.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>doc</strong> (<em>dict</em>) – The document to validate before saving to the collection.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.validatorAnnotation">
+<code class="sig-name descname">validatorAnnotation</code><em class="property"> = &lt;jsonschema.validators.create.&lt;locals&gt;.Validator object&gt;</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.validatorAnnotation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.validatorAnnotationElement">
+<code class="sig-name descname">validatorAnnotationElement</code><em class="property"> = &lt;jsonschema.validators.create.&lt;locals&gt;.Validator object&gt;</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.validatorAnnotationElement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotation.Annotation.versionList">
+<code class="sig-name descname">versionList</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotationId</span></em>, <em class="sig-param"><span class="n">user</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">limit</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">offset</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">sort</span><span class="o">=</span><span class="default_value">(('_version', - 1))</span></em>, <em class="sig-param"><span class="n">force</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#Annotation.versionList"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.Annotation.versionList" title="Permalink to this definition">¶</a></dt>
+<dd><p>List annotation history entries for a specific annotationId.  Only
+annotations that belong to an existing item that the user is allowed to
+view are included.  If the user is an admin, all annotations will be
+included.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annotationId</strong> – the annotation to get history for.</p></li>
+<li><p><strong>user</strong> – the Girder user.</p></li>
+<li><p><strong>limit</strong> – maximum number of history entries to return.</p></li>
+<li><p><strong>offset</strong> – skip this many entries.</p></li>
+<li><p><strong>sort</strong> – the sort method used.  Defaults to reverse _id.</p></li>
+<li><p><strong>force</strong> – if True, don’t authenticate the user.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Yields</dt>
+<dd class="field-even"><p>the entries in the list</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema">
+<em class="property">class </em><code class="sig-prename descclassname">girder_large_image_annotation.models.annotation.</code><code class="sig-name descname">AnnotationSchema</code><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotation.html#AnnotationSchema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.annotationElementSchema">
+<code class="sig-name descname">annotationElementSchema</code><em class="property"> = {'$schema': 'http://json-schema.org/schema#', 'anyOf': [{'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['arrow']}, 'points': {'type': 'array', 'items': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'minItems': 2, 'maxItems': 2}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'description': 'The first point is the head of the arrow', 'required': ['type', 'points'], 'patternProperties': {'^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}, {'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['circle']}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'radius': {'type': 'number', 'minimum': 0}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['type', 'center', 'radius'], 'patternProperties': {'^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}, {'allOf': [{'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string'}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'width': {'type': 'number', 'minimum': 0}, 'height': {'type': 'number', 'minimum': 0}, 'rotation': {'type': 'number', 'description': 'radians counterclockwise around normal'}, 'normal': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'decription': 'normal is the positive z-axis unless otherwise specified', 'required': ['type', 'center', 'width', 'height'], 'additionalProperties': True}]}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['ellipse']}}, 'required': ['type'], 'patternProperties': {'^center$': {}, '^width$': {}, '^height$': {}, '^rotation$': {}, '^normal$': {}, '^fillColor$': {}, '^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}, {'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['point']}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['type', 'center'], 'patternProperties': {'^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}, {'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['polyline']}, 'points': {'type': 'array', 'items': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'minItems': 2}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'closed': {'type': 'boolean', 'description': 'polyline is open if closed flag is not specified'}}, 'required': ['type', 'points'], 'patternProperties': {'^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}, {'allOf': [{'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string'}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'width': {'type': 'number', 'minimum': 0}, 'height': {'type': 'number', 'minimum': 0}, 'rotation': {'type': 'number', 'description': 'radians counterclockwise around normal'}, 'normal': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'decription': 'normal is the positive z-axis unless otherwise specified', 'required': ['type', 'center', 'width', 'height'], 'additionalProperties': True}]}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['rectangle']}}, 'required': ['type'], 'patternProperties': {'^center$': {}, '^width$': {}, '^height$': {}, '^rotation$': {}, '^normal$': {}, '^fillColor$': {}, '^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}, {'allOf': [{'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string'}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'width': {'type': 'number', 'minimum': 0}, 'height': {'type': 'number', 'minimum': 0}, 'rotation': {'type': 'number', 'description': 'radians counterclockwise around normal'}, 'normal': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'decription': 'normal is the positive z-axis unless otherwise specified', 'required': ['type', 'center', 'width', 'height'], 'additionalProperties': True}]}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['rectanglegrid']}, 'widthSubdivisions': {'type': 'integer', 'minimum': 1}, 'heightSubdivisions': {'type': 'integer', 'minimum': 1}}, 'required': ['type', 'widthSubdivisions', 'heightSubdivisions'], 'patternProperties': {'^center$': {}, '^width$': {}, '^height$': {}, '^rotation$': {}, '^normal$': {}, '^fillColor$': {}, '^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}]}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.annotationElementSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.annotationSchema">
+<code class="sig-name descname">annotationSchema</code><em class="property"> = {'$schema': 'http://json-schema.org/schema#', 'additionalProperties': False, 'id': '/girder/plugins/large_image/models/annotation', 'properties': {'attributes': {'additionalProperties': True, 'description': 'Subjective things that apply to the entire image.', 'title': 'Image Attributes', 'type': 'object'}, 'description': {'type': 'string'}, 'elements': {'description': 'Subjective things that apply to a spatial region.', 'items': {'$schema': 'http://json-schema.org/schema#', 'anyOf': [{'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['arrow']}, 'points': {'type': 'array', 'items': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'minItems': 2, 'maxItems': 2}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'description': 'The first point is the head of the arrow', 'required': ['type', 'points'], 'patternProperties': {'^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}, {'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['circle']}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'radius': {'type': 'number', 'minimum': 0}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['type', 'center', 'radius'], 'patternProperties': {'^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}, {'allOf': [{'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string'}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'width': {'type': 'number', 'minimum': 0}, 'height': {'type': 'number', 'minimum': 0}, 'rotation': {'type': 'number', 'description': 'radians counterclockwise around normal'}, 'normal': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'decription': 'normal is the positive z-axis unless otherwise specified', 'required': ['type', 'center', 'width', 'height'], 'additionalProperties': True}]}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['ellipse']}}, 'required': ['type'], 'patternProperties': {'^center$': {}, '^width$': {}, '^height$': {}, '^rotation$': {}, '^normal$': {}, '^fillColor$': {}, '^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}, {'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['point']}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['type', 'center'], 'patternProperties': {'^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}, {'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['polyline']}, 'points': {'type': 'array', 'items': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'minItems': 2}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'closed': {'type': 'boolean', 'description': 'polyline is open if closed flag is not specified'}}, 'required': ['type', 'points'], 'patternProperties': {'^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}, {'allOf': [{'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string'}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'width': {'type': 'number', 'minimum': 0}, 'height': {'type': 'number', 'minimum': 0}, 'rotation': {'type': 'number', 'description': 'radians counterclockwise around normal'}, 'normal': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'decription': 'normal is the positive z-axis unless otherwise specified', 'required': ['type', 'center', 'width', 'height'], 'additionalProperties': True}]}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['rectangle']}}, 'required': ['type'], 'patternProperties': {'^center$': {}, '^width$': {}, '^height$': {}, '^rotation$': {}, '^normal$': {}, '^fillColor$': {}, '^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}, {'allOf': [{'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string'}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'width': {'type': 'number', 'minimum': 0}, 'height': {'type': 'number', 'minimum': 0}, 'rotation': {'type': 'number', 'description': 'radians counterclockwise around normal'}, 'normal': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'decription': 'normal is the positive z-axis unless otherwise specified', 'required': ['type', 'center', 'width', 'height'], 'additionalProperties': True}]}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['rectanglegrid']}, 'widthSubdivisions': {'type': 'integer', 'minimum': 1}, 'heightSubdivisions': {'type': 'integer', 'minimum': 1}}, 'required': ['type', 'widthSubdivisions', 'heightSubdivisions'], 'patternProperties': {'^center$': {}, '^width$': {}, '^height$': {}, '^rotation$': {}, '^normal$': {}, '^fillColor$': {}, '^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}]}, 'title': 'Image Markup', 'type': 'array'}, 'name': {'minLength': 1, 'type': 'string'}}, 'type': 'object'}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.annotationSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.arrowShapeSchema">
+<code class="sig-name descname">arrowShapeSchema</code><em class="property"> = {'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['arrow']}, 'points': {'type': 'array', 'items': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'minItems': 2, 'maxItems': 2}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'description': 'The first point is the head of the arrow', 'required': ['type', 'points'], 'patternProperties': {'^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.arrowShapeSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.baseRectangleShapePatternProperties">
+<code class="sig-name descname">baseRectangleShapePatternProperties</code><em class="property"> = {'^center$': {}, '^fillColor$': {}, '^group$': {}, '^height$': {}, '^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^normal$': {}, '^rotation$': {}, '^width$': {}}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.baseRectangleShapePatternProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.baseRectangleShapeSchema">
+<code class="sig-name descname">baseRectangleShapeSchema</code><em class="property"> = {'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string'}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'width': {'type': 'number', 'minimum': 0}, 'height': {'type': 'number', 'minimum': 0}, 'rotation': {'type': 'number', 'description': 'radians counterclockwise around normal'}, 'normal': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'decription': 'normal is the positive z-axis unless otherwise specified', 'required': ['type', 'center', 'width', 'height'], 'additionalProperties': True}]}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.baseRectangleShapeSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.baseShapePatternProperties">
+<code class="sig-name descname">baseShapePatternProperties</code><em class="property"> = {'^group$': {}, '^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.baseShapePatternProperties" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.baseShapeSchema">
+<code class="sig-name descname">baseShapeSchema</code><em class="property"> = {'$schema': 'http://json-schema.org/schema#', 'additionalProperties': True, 'id': '/girder/plugins/large_image/models/base_shape', 'properties': {'group': {'type': 'string'}, 'id': {'pattern': '^[0-9a-f]{24}$', 'type': 'string'}, 'label': {'additionalProperties': False, 'properties': {'color': {'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$', 'type': 'string'}, 'fontSize': {'exclusiveMinimum': True, 'minimum': 0, 'type': 'number'}, 'value': {'type': 'string'}, 'visibility': {'enum': ['hidden', 'always', 'onhover'], 'type': 'string'}}, 'required': ['value'], 'type': 'object'}, 'lineColor': {'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$', 'type': 'string'}, 'lineWidth': {'minimum': 0, 'type': 'number'}, 'type': {'type': 'string'}}, 'required': ['type'], 'type': 'object'}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.baseShapeSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.circleShapeSchema">
+<code class="sig-name descname">circleShapeSchema</code><em class="property"> = {'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['circle']}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'radius': {'type': 'number', 'minimum': 0}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['type', 'center', 'radius'], 'patternProperties': {'^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.circleShapeSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.colorSchema">
+<code class="sig-name descname">colorSchema</code><em class="property"> = {'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$', 'type': 'string'}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.colorSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.coordSchema">
+<code class="sig-name descname">coordSchema</code><em class="property"> = {'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.', 'items': {'type': 'number'}, 'maxItems': 3, 'minItems': 3, 'name': 'Coordinate', 'type': 'array'}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.coordSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.ellipseShapeSchema">
+<code class="sig-name descname">ellipseShapeSchema</code><em class="property"> = {'allOf': [{'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string'}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'width': {'type': 'number', 'minimum': 0}, 'height': {'type': 'number', 'minimum': 0}, 'rotation': {'type': 'number', 'description': 'radians counterclockwise around normal'}, 'normal': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'decription': 'normal is the positive z-axis unless otherwise specified', 'required': ['type', 'center', 'width', 'height'], 'additionalProperties': True}]}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['ellipse']}}, 'required': ['type'], 'patternProperties': {'^center$': {}, '^width$': {}, '^height$': {}, '^rotation$': {}, '^normal$': {}, '^fillColor$': {}, '^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.ellipseShapeSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.pointShapeSchema">
+<code class="sig-name descname">pointShapeSchema</code><em class="property"> = {'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['point']}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['type', 'center'], 'patternProperties': {'^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.pointShapeSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.polylineShapeSchema">
+<code class="sig-name descname">polylineShapeSchema</code><em class="property"> = {'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['polyline']}, 'points': {'type': 'array', 'items': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'minItems': 2}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'closed': {'type': 'boolean', 'description': 'polyline is open if closed flag is not specified'}}, 'required': ['type', 'points'], 'patternProperties': {'^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.polylineShapeSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.rectangleGridShapeSchema">
+<code class="sig-name descname">rectangleGridShapeSchema</code><em class="property"> = {'allOf': [{'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string'}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'width': {'type': 'number', 'minimum': 0}, 'height': {'type': 'number', 'minimum': 0}, 'rotation': {'type': 'number', 'description': 'radians counterclockwise around normal'}, 'normal': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'decription': 'normal is the positive z-axis unless otherwise specified', 'required': ['type', 'center', 'width', 'height'], 'additionalProperties': True}]}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['rectanglegrid']}, 'widthSubdivisions': {'type': 'integer', 'minimum': 1}, 'heightSubdivisions': {'type': 'integer', 'minimum': 1}}, 'required': ['type', 'widthSubdivisions', 'heightSubdivisions'], 'patternProperties': {'^center$': {}, '^width$': {}, '^height$': {}, '^rotation$': {}, '^normal$': {}, '^fillColor$': {}, '^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.rectangleGridShapeSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotation.AnnotationSchema.rectangleShapeSchema">
+<code class="sig-name descname">rectangleShapeSchema</code><em class="property"> = {'allOf': [{'allOf': [{'$schema': 'http://json-schema.org/schema#', 'id': '/girder/plugins/large_image/models/base_shape', 'type': 'object', 'properties': {'id': {'type': 'string', 'pattern': '^[0-9a-f]{24}$'}, 'type': {'type': 'string'}, 'label': {'type': 'object', 'properties': {'value': {'type': 'string'}, 'visibility': {'type': 'string', 'enum': ['hidden', 'always', 'onhover']}, 'fontSize': {'type': 'number', 'minimum': 0, 'exclusiveMinimum': True}, 'color': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'required': ['value'], 'additionalProperties': False}, 'lineColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}, 'lineWidth': {'type': 'number', 'minimum': 0}, 'group': {'type': 'string'}}, 'required': ['type'], 'additionalProperties': True}, {'type': 'object', 'properties': {'type': {'type': 'string'}, 'center': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'width': {'type': 'number', 'minimum': 0}, 'height': {'type': 'number', 'minimum': 0}, 'rotation': {'type': 'number', 'description': 'radians counterclockwise around normal'}, 'normal': {'type': 'array', 'items': {'type': 'number'}, 'minItems': 3, 'maxItems': 3, 'name': 'Coordinate', 'description': 'An X, Y, Z coordinate tuple, in base layer pixel coordinates, where the origin is the upper-left.'}, 'fillColor': {'type': 'string', 'pattern': '^(#[0-9a-fA-F]{3,6}|rgb\\(\\d+,\\s*\\d+,\\s*\\d+\\)|rgba\\(\\d+,\\s*\\d+,\\s*\\d+,\\s*(\\d?\\.|)\\d+\\))$'}}, 'decription': 'normal is the positive z-axis unless otherwise specified', 'required': ['type', 'center', 'width', 'height'], 'additionalProperties': True}]}, {'type': 'object', 'properties': {'type': {'type': 'string', 'enum': ['rectangle']}}, 'required': ['type'], 'patternProperties': {'^center$': {}, '^width$': {}, '^height$': {}, '^rotation$': {}, '^normal$': {}, '^fillColor$': {}, '^id$': {}, '^label$': {}, '^lineColor$': {}, '^lineWidth$': {}, '^group$': {}}, 'additionalProperties': False}]}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotation.AnnotationSchema.rectangleShapeSchema" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-girder_large_image_annotation.models.annotationelement">
+<span id="girder-large-image-annotation-models-annotationelement-module"></span><h2>girder_large_image_annotation.models.annotationelement module<a class="headerlink" href="#module-girder_large_image_annotation.models.annotationelement" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="girder_large_image_annotation.models.annotationelement.Annotationelement">
+<em class="property">class </em><code class="sig-prename descclassname">girder_large_image_annotation.models.annotationelement.</code><code class="sig-name descname">Annotationelement</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotationelement.html#Annotationelement"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotationelement.Annotationelement" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">girder.models.model_base.Model</span></code></p>
+<dl class="py attribute">
+<dt id="girder_large_image_annotation.models.annotationelement.Annotationelement.bboxKeys">
+<code class="sig-name descname">bboxKeys</code><em class="property"> = {'bottom': ('bbox.lowy', '$lt'), 'details': ('bbox.details', None), 'high': ('bbox.lowz', '$lt'), 'left': ('bbox.highx', '$gte'), 'low': ('bbox.highz', '$gte'), 'minimumSize': ('bbox.size', '$gte'), 'right': ('bbox.lowx', '$lt'), 'size': ('bbox.size', None), 'top': ('bbox.highy', '$gte')}</em><a class="headerlink" href="#girder_large_image_annotation.models.annotationelement.Annotationelement.bboxKeys" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotationelement.Annotationelement.getElementGroupSet">
+<code class="sig-name descname">getElementGroupSet</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotation</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotationelement.html#Annotationelement.getElementGroupSet"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotationelement.Annotationelement.getElementGroupSet" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotationelement.Annotationelement.getElements">
+<code class="sig-name descname">getElements</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotation</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotationelement.html#Annotationelement.getElements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotationelement.Annotationelement.getElements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an annotation, fetch the elements from the database and add them
+to it.</p>
+<blockquote>
+<div><p>When a region is used to request specific element, the following</p>
+</div></blockquote>
+<dl class="simple">
+<dt>keys can be specified:</dt><dd><p>left, right, top, bottom, low, high: the spatial area where</p>
+</dd>
+</dl>
+<p>elements are located, all in pixels.  If an element’s bounding box is
+at least partially within the requested area, that element is included.</p>
+<blockquote>
+<div><p>minimumSize: the minimum size of an element to return.
+sort, sortdir: standard sort options.  The sort key can include</p>
+</div></blockquote>
+<dl class="simple">
+<dt>size and details.</dt><dd><p>limit: limit the total number of elements by this value.  Defaults</p>
+</dd>
+<dt>to no limit.</dt><dd><p>offset: the offset within the query to start returning values.  If</p>
+</dd>
+</dl>
+<p>maxDetails is used, to get subsequent sets of elements, the offset
+needs to be increased by the actual number of elements returned from a
+previous query, which will vary based on the details of the elements.</p>
+<blockquote>
+<div><p>maxDetails: if specified, limit the total number of elements by the</p>
+</div></blockquote>
+<p>sum of their details values.  This is applied in addition to limit.
+The sum of the details values of the elements may exceed maxDetails
+slightly (the sum of all but the last element will be less than
+maxDetails, but the last element may exceed the value).</p>
+<blockquote>
+<div><p>centroids: if specified and true, only return the id, center of the</p>
+</div></blockquote>
+<p>bounding box, and bounding box size for each element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annotation</strong> – the annotation to get elements for.  Modified.</p></li>
+<li><p><strong>region</strong> – if present, a dictionary restricting which annotations
+are returned.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotationelement.Annotationelement.getNextVersionValue">
+<code class="sig-name descname">getNextVersionValue</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotationelement.html#Annotationelement.getNextVersionValue"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotationelement.Annotationelement.getNextVersionValue" title="Permalink to this definition">¶</a></dt>
+<dd><p>Maintain a version number.  This is a single sequence that can be used
+to ensure we have the correct set of elements for an annotation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>an integer version number that is strictly increasing.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotationelement.Annotationelement.initialize">
+<code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotationelement.html#Annotationelement.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotationelement.Annotationelement.initialize" title="Permalink to this definition">¶</a></dt>
+<dd><p>Subclasses should override this and set the name of the collection as
+self.name. Also, they should set any indexed fields that they require.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotationelement.Annotationelement.removeElements">
+<code class="sig-name descname">removeElements</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotation</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotationelement.html#Annotationelement.removeElements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotationelement.Annotationelement.removeElements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all elements related to the specified annotation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>annotation</strong> – the annotation to remove elements from.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotationelement.Annotationelement.removeOldElements">
+<code class="sig-name descname">removeOldElements</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotation</span></em>, <em class="sig-param"><span class="n">oldversion</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotationelement.html#Annotationelement.removeOldElements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotationelement.Annotationelement.removeOldElements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all elements related to the specified annoation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annotation</strong> – the annotation to remove elements from.</p></li>
+<li><p><strong>oldversion</strong> – if present, remove versions up to this number.  If
+none, remove versions earlier than the version in
+the annotation record.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotationelement.Annotationelement.removeWithQuery">
+<code class="sig-name descname">removeWithQuery</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">query</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotationelement.html#Annotationelement.removeWithQuery"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotationelement.Annotationelement.removeWithQuery" title="Permalink to this definition">¶</a></dt>
+<dd><p>Remove all documents matching a given query from the collection.
+For safety reasons, you may not pass an empty query.</p>
+<p>Note: this does NOT return a Mongo DeleteResult.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>query</strong> (<em>dict</em>) – The search query for documents to delete,
+see general MongoDB docs for “find()”</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotationelement.Annotationelement.updateElements">
+<code class="sig-name descname">updateElements</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotation</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotationelement.html#Annotationelement.updateElements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotationelement.Annotationelement.updateElements" title="Permalink to this definition">¶</a></dt>
+<dd><p>Given an annotation, extract the elements from it and update the
+database of them.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>annotation</strong> – the annotation to save elements for.  Modified.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="girder_large_image_annotation.models.annotationelement.Annotationelement.yieldElements">
+<code class="sig-name descname">yieldElements</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">annotation</span></em>, <em class="sig-param"><span class="n">region</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">info</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/girder_large_image_annotation/models/annotationelement.html#Annotationelement.yieldElements"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#girder_large_image_annotation.models.annotationelement.Annotationelement.yieldElements" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="simple">
+<dt>Given an annotation, fetch the elements from the database.</dt><dd><p>When a region is used to request specific element, the following</p>
+</dd>
+<dt>keys can be specified:</dt><dd><p>left, right, top, bottom, low, high: the spatial area where</p>
+</dd>
+</dl>
+<p>elements are located, all in pixels.  If an element’s bounding box is
+at least partially within the requested area, that element is included.</p>
+<blockquote>
+<div><p>minimumSize: the minimum size of an element to return.
+sort, sortdir: standard sort options.  The sort key can include</p>
+</div></blockquote>
+<dl class="simple">
+<dt>size and details.</dt><dd><p>limit: limit the total number of elements by this value.  Defaults</p>
+</dd>
+<dt>to no limit.</dt><dd><p>offset: the offset within the query to start returning values.  If</p>
+</dd>
+</dl>
+<p>maxDetails is used, to get subsequent sets of elements, the offset
+needs to be increased by the actual number of elements returned from a
+previous query, which will vary based on the details of the elements.</p>
+<blockquote>
+<div><p>maxDetails: if specified, limit the total number of elements by the</p>
+</div></blockquote>
+<p>sum of their details values.  This is applied in addition to limit.
+The sum of the details values of the elements may exceed maxDetails
+slightly (the sum of all but the last element will be less than
+maxDetails, but the last element may exceed the value).</p>
+<blockquote>
+<div><p>centroids: if specified and true, only return the id, center of the</p>
+</div></blockquote>
+<p>bounding box, and bounding box size for each element.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>annotation</strong> – the annotation to get elements for.  Modified.</p></li>
+<li><p><strong>region</strong> – if present, a dictionary restricting which annotations
+are returned.</p></li>
+<li><p><strong>info</strong> – an optional dictionary that will be modified with
+additional query information, including count (total number of
+available elements), returned (number of elements in response),
+maxDetails (as specified by the region dictionary), details (sum of
+details returned), limit (as specified by region), centroids (a
+boolean based on the region specification).</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>a list of elements.  If centroids were requested, each entry
+is a list with str(id), x, y, size.  Otherwise, each entry is the
+element record.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-girder_large_image_annotation.models">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-girder_large_image_annotation.models" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="girder_large_image_annotation.rest.html" class="btn btn-neutral float-right" title="girder_large_image_annotation.rest package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="girder_large_image_annotation.html" class="btn btn-neutral float-left" title="girder_large_image_annotation package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Kitware, Inc..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

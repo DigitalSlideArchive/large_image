@@ -1,0 +1,429 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>large_image.cache_util.cache &mdash; large_image  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script src="../../../_static/jquery.js"></script>
+        <script src="../../../_static/underscore.js"></script>
+        <script src="../../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> large_image
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../tilesource_options.html">Tile Source Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image/modules.html">large_image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image_source_dummy/modules.html">large_image_source_dummy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image_source_gdal/modules.html">large_image_source_gdal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image_source_mapnik/modules.html">large_image_source_mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image_source_nd2/modules.html">large_image_source_nd2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image_source_ometiff/modules.html">large_image_source_ometiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image_source_openjpeg/modules.html">large_image_source_openjpeg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image_source_openslide/modules.html">large_image_source_openslide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image_source_pil/modules.html">large_image_source_pil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image_source_test/modules.html">large_image_source_test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image_source_tiff/modules.html">large_image_source_tiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image_converter/modules.html">large_image_converter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../large_image_tasks/modules.html">large_image_tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../girder_large_image/modules.html">girder_large_image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../girder_large_image_annotation/modules.html">girder_large_image_annotation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../index.html">large_image</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../../index.html">Module code</a> &raquo;</li>
+        
+      <li>large_image.cache_util.cache</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for large_image.cache_util.cache</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="c1">###############################################################################</span>
+<span class="c1">#  Copyright Kitware Inc.</span>
+<span class="c1">#</span>
+<span class="c1">#  Licensed under the Apache License, Version 2.0 ( the &quot;License&quot; );</span>
+<span class="c1">#  you may not use this file except in compliance with the License.</span>
+<span class="c1">#  You may obtain a copy of the License at</span>
+<span class="c1">#</span>
+<span class="c1">#    http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1">#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1">#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1">#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1">#  See the License for the specific language governing permissions and</span>
+<span class="c1">#  limitations under the License.</span>
+<span class="c1">###############################################################################</span>
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="kn">import</span> <span class="nn">resource</span>
+<span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+    <span class="n">resource</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="kn">import</span> <span class="nn">six</span>
+
+<span class="kn">from</span> <span class="nn">.cachefactory</span> <span class="kn">import</span> <span class="n">CacheFactory</span><span class="p">,</span> <span class="n">pickAvailableCache</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">config</span>
+
+
+<span class="n">_tileCache</span> <span class="o">=</span> <span class="kc">None</span>
+<span class="n">_tileLock</span> <span class="o">=</span> <span class="kc">None</span>
+
+
+<span class="c1"># If we have a resource module, ask to use as many file handles as the hard</span>
+<span class="c1"># limit allows, then calculate how may tile sources we can have open based on</span>
+<span class="c1"># the actual limit.</span>
+<span class="n">MaximumTileSources</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="k">if</span> <span class="n">resource</span><span class="p">:</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">SoftNoFile</span><span class="p">,</span> <span class="n">HardNoFile</span> <span class="o">=</span> <span class="n">resource</span><span class="o">.</span><span class="n">getrlimit</span><span class="p">(</span><span class="n">resource</span><span class="o">.</span><span class="n">RLIMIT_NOFILE</span><span class="p">)</span>
+        <span class="n">resource</span><span class="o">.</span><span class="n">setrlimit</span><span class="p">(</span><span class="n">resource</span><span class="o">.</span><span class="n">RLIMIT_NOFILE</span><span class="p">,</span> <span class="p">(</span><span class="n">HardNoFile</span><span class="p">,</span> <span class="n">HardNoFile</span><span class="p">))</span>
+        <span class="n">SoftNoFile</span><span class="p">,</span> <span class="n">HardNoFile</span> <span class="o">=</span> <span class="n">resource</span><span class="o">.</span><span class="n">getrlimit</span><span class="p">(</span><span class="n">resource</span><span class="o">.</span><span class="n">RLIMIT_NOFILE</span><span class="p">)</span>
+        <span class="c1"># Reserve some file handles for general use, and expect that tile</span>
+        <span class="c1"># sources could use many handles each.  This is conservative, since</span>
+        <span class="c1"># running out of file handles breaks the program in general.</span>
+        <span class="n">MaximumTileSources</span> <span class="o">=</span> <span class="nb">max</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="p">(</span><span class="n">SoftNoFile</span> <span class="o">-</span> <span class="mi">10</span><span class="p">)</span> <span class="o">/</span> <span class="mi">20</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">pass</span>
+
+
+<span class="n">CacheProperties</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;tilesource&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="c1"># Cache size is based on what the class needs, which does not include</span>
+        <span class="c1"># individual tiles</span>
+        <span class="s1">&#39;itemExpectedSize&#39;</span><span class="p">:</span> <span class="mi">24</span> <span class="o">*</span> <span class="mi">1024</span> <span class="o">**</span> <span class="mi">2</span><span class="p">,</span>
+        <span class="s1">&#39;maxItems&#39;</span><span class="p">:</span> <span class="n">MaximumTileSources</span><span class="p">,</span>
+        <span class="c1"># The cache timeout is not currently being used, but it is set here in</span>
+        <span class="c1"># case we ever choose to implement it.</span>
+        <span class="s1">&#39;cacheTimeout&#39;</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="strhash"><a class="viewcode-back" href="../../../large_image/large_image.cache_util.html#large_image.cache_util.cache.strhash">[docs]</a><span class="k">def</span> <span class="nf">strhash</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Generate a string hash value for an arbitrary set of args and kwargs.  This</span>
+<span class="sd">    relies on the repr of each element.</span>
+
+<span class="sd">    :param args: arbitrary tuple of args.</span>
+<span class="sd">    :param kwargs: arbitrary dictionary of kwargs.</span>
+<span class="sd">    :returns: hashed string of the arguments.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="n">kwargs</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;</span><span class="si">%r</span><span class="s1">,</span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">kwargs</span><span class="o">.</span><span class="n">items</span><span class="p">()))</span>
+    <span class="k">return</span> <span class="s1">&#39;</span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="methodcache"><a class="viewcode-back" href="../../../large_image/large_image.cache_util.html#large_image.cache_util.cache.methodcache">[docs]</a><span class="k">def</span> <span class="nf">methodcache</span><span class="p">(</span><span class="n">key</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Decorator to wrap a function with a memoizing callable that saves results</span>
+<span class="sd">    in self.cache.  This is largely taken from cachetools, but uses a cache</span>
+<span class="sd">    from self.cache rather than a passed value.  If self.cache_lock is</span>
+<span class="sd">    present and not none, a lock is used.</span>
+
+<span class="sd">    :param key: if a function, use that for the key, otherwise use self.wrapKey.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">def</span> <span class="nf">decorator</span><span class="p">(</span><span class="n">func</span><span class="p">):</span>
+        <span class="nd">@six</span><span class="o">.</span><span class="n">wraps</span><span class="p">(</span><span class="n">func</span><span class="p">)</span>
+        <span class="k">def</span> <span class="nf">wrapper</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="n">k</span> <span class="o">=</span> <span class="n">key</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span> <span class="k">if</span> <span class="n">key</span> <span class="k">else</span> <span class="bp">self</span><span class="o">.</span><span class="n">wrapKey</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;_classkey&#39;</span><span class="p">):</span>
+                <span class="n">k</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_classkey</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">k</span>
+            <span class="n">lock</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="s1">&#39;cache_lock&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">lock</span><span class="p">:</span>
+                    <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache_lock</span><span class="p">:</span>
+                        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="p">[</span><span class="n">k</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="k">pass</span>  <span class="c1"># key not found</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="c1"># this can happen if a different version of python wrote the record</span>
+                <span class="k">pass</span>
+            <span class="n">v</span> <span class="o">=</span> <span class="n">func</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="k">if</span> <span class="n">lock</span><span class="p">:</span>
+                    <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">cache_lock</span><span class="p">:</span>
+                        <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+                <span class="k">else</span><span class="p">:</span>
+                    <span class="bp">self</span><span class="o">.</span><span class="n">cache</span><span class="p">[</span><span class="n">k</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span>
+            <span class="k">except</span> <span class="ne">ValueError</span><span class="p">:</span>
+                <span class="k">pass</span>  <span class="c1"># value too large</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="c1"># the key was refused for some reason</span>
+                <span class="n">config</span><span class="o">.</span><span class="n">getConfig</span><span class="p">(</span><span class="s1">&#39;logger&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
+                    <span class="s1">&#39;Had a cache KeyError while trying to store a value to key </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">k</span><span class="p">))</span>
+            <span class="k">return</span> <span class="n">v</span>
+        <span class="k">return</span> <span class="n">wrapper</span>
+    <span class="k">return</span> <span class="n">decorator</span></div>
+
+
+<div class="viewcode-block" id="LruCacheMetaclass"><a class="viewcode-back" href="../../../large_image/large_image.cache_util.html#large_image.cache_util.cache.LruCacheMetaclass">[docs]</a><span class="k">class</span> <span class="nc">LruCacheMetaclass</span><span class="p">(</span><span class="nb">type</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">namedCaches</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">classCaches</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="k">def</span> <span class="fm">__new__</span><span class="p">(</span><span class="n">metacls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">namespace</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># noqa - N804</span>
+        <span class="c1"># Get metaclass parameters by finding and removing them from the class</span>
+        <span class="c1"># namespace (necessary for Python 2), or preferentially as metaclass</span>
+        <span class="c1"># arguments (only in Python 3).</span>
+
+        <span class="n">cacheName</span> <span class="o">=</span> <span class="n">namespace</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cacheName&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">cacheName</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cacheName&#39;</span><span class="p">,</span> <span class="n">cacheName</span><span class="p">)</span>
+
+        <span class="n">maxSize</span> <span class="o">=</span> <span class="n">CacheProperties</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cacheName</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cacheMaxSize&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">maxSize</span> <span class="ow">is</span> <span class="kc">None</span> <span class="ow">and</span> <span class="n">cacheName</span> <span class="ow">in</span> <span class="n">CacheProperties</span> <span class="ow">and</span>
+                <span class="s1">&#39;maxItems&#39;</span> <span class="ow">in</span> <span class="n">CacheProperties</span><span class="p">[</span><span class="n">cacheName</span><span class="p">]</span> <span class="ow">and</span>
+                <span class="s1">&#39;itemExpectedSize&#39;</span> <span class="ow">in</span> <span class="n">CacheProperties</span><span class="p">[</span><span class="n">cacheName</span><span class="p">]</span> <span class="ow">and</span> <span class="s1">&#39;itemExpectedSize&#39;</span><span class="p">):</span>
+            <span class="n">maxSize</span> <span class="o">=</span> <span class="n">pickAvailableCache</span><span class="p">(</span>
+                <span class="n">CacheProperties</span><span class="p">[</span><span class="n">cacheName</span><span class="p">][</span><span class="s1">&#39;itemExpectedSize&#39;</span><span class="p">],</span>
+                <span class="n">maxItems</span><span class="o">=</span><span class="n">CacheProperties</span><span class="p">[</span><span class="n">cacheName</span><span class="p">][</span><span class="s1">&#39;maxItems&#39;</span><span class="p">])</span>
+        <span class="n">maxSize</span> <span class="o">=</span> <span class="n">namespace</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;cacheMaxSize&#39;</span><span class="p">,</span> <span class="n">maxSize</span><span class="p">)</span>
+        <span class="n">maxSize</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cacheMaxSize&#39;</span><span class="p">,</span> <span class="n">maxSize</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">maxSize</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s1">&#39;Usage of the LruCacheMetaclass requires a &#39;</span>
+                            <span class="s1">&#39;&quot;cacheMaxSize&quot; attribute on the class </span><span class="si">%s</span><span class="s1">.&#39;</span> <span class="o">%</span> <span class="n">name</span><span class="p">)</span>
+
+        <span class="n">timeout</span> <span class="o">=</span> <span class="n">CacheProperties</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cacheName</span><span class="p">,</span> <span class="p">{})</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cacheTimeout&#39;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+        <span class="n">timeout</span> <span class="o">=</span> <span class="n">namespace</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">&#39;cacheTimeout&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+        <span class="n">timeout</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;cacheTimeout&#39;</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span>
+
+        <span class="bp">cls</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">LruCacheMetaclass</span><span class="p">,</span> <span class="n">metacls</span><span class="p">)</span><span class="o">.</span><span class="fm">__new__</span><span class="p">(</span>
+            <span class="n">metacls</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">bases</span><span class="p">,</span> <span class="n">namespace</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">cacheName</span><span class="p">:</span>
+            <span class="n">cacheName</span> <span class="o">=</span> <span class="bp">cls</span>
+
+        <span class="k">if</span> <span class="n">LruCacheMetaclass</span><span class="o">.</span><span class="n">namedCaches</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">cacheName</span><span class="p">)</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">cache</span><span class="p">,</span> <span class="n">cacheLock</span> <span class="o">=</span> <span class="n">CacheFactory</span><span class="p">()</span><span class="o">.</span><span class="n">getCache</span><span class="p">(</span><span class="n">maxSize</span><span class="p">)</span>
+            <span class="n">LruCacheMetaclass</span><span class="o">.</span><span class="n">namedCaches</span><span class="p">[</span><span class="n">cacheName</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">cache</span><span class="p">,</span> <span class="n">cacheLock</span><span class="p">)</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">getConfig</span><span class="p">(</span><span class="s1">&#39;logger&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">info</span><span class="p">(</span>
+                <span class="s1">&#39;Created LRU Cache for </span><span class="si">%r</span><span class="s1"> with </span><span class="si">%d</span><span class="s1"> maximum size&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">cacheName</span><span class="p">,</span> <span class="n">maxSize</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">cache</span><span class="p">,</span> <span class="n">cacheLock</span><span class="p">)</span> <span class="o">=</span> <span class="n">LruCacheMetaclass</span><span class="o">.</span><span class="n">namedCaches</span><span class="p">[</span><span class="n">cacheName</span><span class="p">]</span>
+
+        <span class="c1"># Don&#39;t store the cache in cls.__dict__, because we don&#39;t want it to be</span>
+        <span class="c1"># part of the attribute lookup hierarchy</span>
+        <span class="c1"># TODO: consider putting it in cls.__dict__, to inspect statistics</span>
+        <span class="c1"># cls is hashable though, so use it to lookup the cache, in case an</span>
+        <span class="c1"># identically-named class gets redefined</span>
+        <span class="n">LruCacheMetaclass</span><span class="o">.</span><span class="n">classCaches</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">cache</span><span class="p">,</span> <span class="n">cacheLock</span><span class="p">)</span>
+
+        <span class="k">return</span> <span class="bp">cls</span>
+
+    <span class="k">def</span> <span class="fm">__call__</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>  <span class="c1"># noqa - N805</span>
+
+        <span class="n">cache</span><span class="p">,</span> <span class="n">cacheLock</span> <span class="o">=</span> <span class="n">LruCacheMetaclass</span><span class="o">.</span><span class="n">classCaches</span><span class="p">[</span><span class="bp">cls</span><span class="p">]</span>
+
+        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="s1">&#39;getLRUHash&#39;</span><span class="p">):</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="n">getLRUHash</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">key</span> <span class="o">=</span> <span class="n">strhash</span><span class="p">(</span><span class="n">args</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">kwargs</span><span class="p">)</span>
+        <span class="n">key</span> <span class="o">=</span> <span class="bp">cls</span><span class="o">.</span><span class="vm">__name__</span> <span class="o">+</span> <span class="s1">&#39; &#39;</span> <span class="o">+</span> <span class="n">key</span>
+        <span class="k">with</span> <span class="n">cacheLock</span><span class="p">:</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">instance</span> <span class="o">=</span> <span class="n">cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+            <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+                <span class="n">instance</span> <span class="o">=</span> <span class="nb">super</span><span class="p">(</span><span class="n">LruCacheMetaclass</span><span class="p">,</span> <span class="bp">cls</span><span class="p">)</span><span class="o">.</span><span class="fm">__call__</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+                <span class="n">cache</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">instance</span>
+                <span class="n">instance</span><span class="o">.</span><span class="n">_classkey</span> <span class="o">=</span> <span class="n">key</span>
+
+        <span class="k">return</span> <span class="n">instance</span></div>
+
+
+<div class="viewcode-block" id="getTileCache"><a class="viewcode-back" href="../../../large_image/large_image.cache_util.html#large_image.cache_util.cache.getTileCache">[docs]</a><span class="k">def</span> <span class="nf">getTileCache</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the preferred tile cache and lock.</span>
+
+<span class="sd">    :returns: tileCache and tileLock.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">global</span> <span class="n">_tileCache</span><span class="p">,</span> <span class="n">_tileLock</span>
+
+    <span class="k">if</span> <span class="n">_tileCache</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># Decide whether to use Memcached or cachetools</span>
+        <span class="n">_tileCache</span><span class="p">,</span> <span class="n">_tileLock</span> <span class="o">=</span> <span class="n">CacheFactory</span><span class="p">()</span><span class="o">.</span><span class="n">getCache</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">_tileCache</span><span class="p">,</span> <span class="n">_tileLock</span></div>
+
+
+<div class="viewcode-block" id="isTileCacheSetup"><a class="viewcode-back" href="../../../large_image/large_image.cache_util.html#large_image.cache_util.cache.isTileCacheSetup">[docs]</a><span class="k">def</span> <span class="nf">isTileCacheSetup</span><span class="p">():</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Return True if the tile cache has been created.</span>
+
+<span class="sd">    :returns: True if _tileCache is not None.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">_tileCache</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Kitware, Inc..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

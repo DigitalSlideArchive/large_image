@@ -1,0 +1,362 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>large_image.tilesource &mdash; large_image  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> large_image
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tilesource_options.html">Tile Source Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image/modules.html">large_image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image_source_dummy/modules.html">large_image_source_dummy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image_source_gdal/modules.html">large_image_source_gdal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image_source_mapnik/modules.html">large_image_source_mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image_source_nd2/modules.html">large_image_source_nd2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image_source_ometiff/modules.html">large_image_source_ometiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image_source_openjpeg/modules.html">large_image_source_openjpeg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image_source_openslide/modules.html">large_image_source_openslide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image_source_pil/modules.html">large_image_source_pil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image_source_test/modules.html">large_image_source_test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image_source_tiff/modules.html">large_image_source_tiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image_converter/modules.html">large_image_converter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large_image_tasks/modules.html">large_image_tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../girder_large_image/modules.html">girder_large_image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../girder_large_image_annotation/modules.html">girder_large_image_annotation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">large_image</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../index.html">Module code</a> &raquo;</li>
+        
+      <li>large_image.tilesource</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for large_image.tilesource</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="kn">from</span> <span class="nn">pkg_resources</span> <span class="kn">import</span> <span class="n">iter_entry_points</span>
+
+<span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="n">TileSource</span><span class="p">,</span> <span class="n">FileTileSource</span><span class="p">,</span> <span class="n">TileOutputMimeTypes</span><span class="p">,</span> \
+    <span class="n">TILE_FORMAT_IMAGE</span><span class="p">,</span> <span class="n">TILE_FORMAT_PIL</span><span class="p">,</span> <span class="n">TILE_FORMAT_NUMPY</span><span class="p">,</span> <span class="n">nearPowerOfTwo</span><span class="p">,</span> \
+    <span class="n">etreeToDict</span><span class="p">,</span> <span class="n">dictToEtree</span>
+<span class="kn">from</span> <span class="nn">..exceptions</span> <span class="kn">import</span> <span class="n">TileGeneralException</span><span class="p">,</span> <span class="n">TileSourceException</span><span class="p">,</span> <span class="n">TileSourceAssetstoreException</span>
+<span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">config</span>
+<span class="kn">from</span> <span class="nn">..constants</span> <span class="kn">import</span> <span class="n">SourcePriority</span>
+
+
+<span class="n">AvailableTileSources</span> <span class="o">=</span> <span class="p">{}</span>
+
+
+<span class="k">def</span> <span class="nf">isGeospatial</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if a path is likely to be a geospatial file.</span>
+
+<span class="sd">    :params path: The path to the file</span>
+<span class="sd">    :returns: True if geospatial.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">gdal</span>
+        <span class="kn">from</span> <span class="nn">osgeo</span> <span class="kn">import</span> <span class="n">gdalconst</span>
+    <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
+        <span class="c1"># TODO: log a warning</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">ds</span> <span class="o">=</span> <span class="n">gdal</span><span class="o">.</span><span class="n">Open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">gdalconst</span><span class="o">.</span><span class="n">GA_ReadOnly</span><span class="p">)</span>
+    <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">ds</span><span class="o">.</span><span class="n">GetProjection</span><span class="p">():</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">if</span> <span class="n">ds</span><span class="o">.</span><span class="n">GetDriver</span><span class="p">()</span><span class="o">.</span><span class="n">ShortName</span> <span class="ow">in</span> <span class="p">{</span><span class="s1">&#39;NITF&#39;</span><span class="p">,</span> <span class="s1">&#39;netCDF&#39;</span><span class="p">}:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span>
+
+
+<span class="k">def</span> <span class="nf">loadTileSources</span><span class="p">(</span><span class="n">entryPointName</span><span class="o">=</span><span class="s1">&#39;large_image.source&#39;</span><span class="p">,</span> <span class="n">sourceDict</span><span class="o">=</span><span class="n">AvailableTileSources</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Load all tilesources from entrypoints and add them to the</span>
+<span class="sd">    AvailableTileSources dictionary.</span>
+
+<span class="sd">    :param entryPointName: the name of the entry points to load.</span>
+<span class="sd">    :param sourceDict: a dictionary to populate with the loaded sources.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">entryPoint</span> <span class="ow">in</span> <span class="n">iter_entry_points</span><span class="p">(</span><span class="n">entryPointName</span><span class="p">):</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">sourceClass</span> <span class="o">=</span> <span class="n">entryPoint</span><span class="o">.</span><span class="n">load</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">sourceClass</span><span class="o">.</span><span class="n">name</span> <span class="ow">and</span> <span class="kc">None</span> <span class="ow">in</span> <span class="n">sourceClass</span><span class="o">.</span><span class="n">extensions</span><span class="p">:</span>
+                <span class="n">sourceDict</span><span class="p">[</span><span class="n">entryPoint</span><span class="o">.</span><span class="n">name</span><span class="p">]</span> <span class="o">=</span> <span class="n">sourceClass</span>
+                <span class="n">config</span><span class="o">.</span><span class="n">getConfig</span><span class="p">(</span><span class="s1">&#39;logprint&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s1">&#39;Loaded tile source </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">entryPoint</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+            <span class="n">config</span><span class="o">.</span><span class="n">getConfig</span><span class="p">(</span><span class="s1">&#39;logprint&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">exception</span><span class="p">(</span>
+                <span class="s1">&#39;Failed to loaded tile source </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">entryPoint</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
+            <span class="k">pass</span>
+
+
+<div class="viewcode-block" id="getSourceNameFromDict"><a class="viewcode-back" href="../../large_image/large_image.tilesource.html#large_image.tilesource.getSourceNameFromDict">[docs]</a><span class="k">def</span> <span class="nf">getSourceNameFromDict</span><span class="p">(</span><span class="n">availableSources</span><span class="p">,</span> <span class="n">pathOrUri</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get a tile source based on a ordered dictionary of known sources and a path</span>
+<span class="sd">    name or URI.  Additional parameters are passed to the tile source and can</span>
+<span class="sd">    be used for properties such as encoding.</span>
+
+<span class="sd">    :param availableSources: an ordered dictionary of sources to try.</span>
+<span class="sd">    :param pathOrUri: either a file path or a fixed source via</span>
+<span class="sd">        large_image://&lt;source&gt;.</span>
+<span class="sd">    :returns: the name of a tile source that can read the input, or None if</span>
+<span class="sd">        there is no such source.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">uriWithoutProtocol</span> <span class="o">=</span> <span class="n">pathOrUri</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;://&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">isLargeImageUri</span> <span class="o">=</span> <span class="n">pathOrUri</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;large_image://&#39;</span><span class="p">)</span>
+    <span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="n">ext</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">for</span> <span class="n">ext</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">uriWithoutProtocol</span><span class="p">)</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39;.&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">:]]</span>
+    <span class="n">properties</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;geospatial&#39;</span><span class="p">:</span> <span class="n">isGeospatial</span><span class="p">(</span><span class="n">pathOrUri</span><span class="p">),</span>
+    <span class="p">}</span>
+    <span class="n">sourceList</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">sourceName</span> <span class="ow">in</span> <span class="n">availableSources</span><span class="p">:</span>
+        <span class="n">sourceExtensions</span> <span class="o">=</span> <span class="n">availableSources</span><span class="p">[</span><span class="n">sourceName</span><span class="p">]</span><span class="o">.</span><span class="n">extensions</span>
+        <span class="n">priority</span> <span class="o">=</span> <span class="n">sourceExtensions</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="kc">None</span><span class="p">,</span> <span class="n">SourcePriority</span><span class="o">.</span><span class="n">MANUAL</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">ext</span> <span class="ow">in</span> <span class="n">extensions</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">ext</span> <span class="ow">in</span> <span class="n">sourceExtensions</span><span class="p">:</span>
+                <span class="n">priority</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">priority</span><span class="p">,</span> <span class="n">sourceExtensions</span><span class="p">[</span><span class="n">ext</span><span class="p">])</span>
+        <span class="k">if</span> <span class="n">isLargeImageUri</span> <span class="ow">and</span> <span class="n">sourceName</span> <span class="o">==</span> <span class="n">uriWithoutProtocol</span><span class="p">:</span>
+            <span class="n">priority</span> <span class="o">=</span> <span class="n">SourcePriority</span><span class="o">.</span><span class="n">NAMED</span>
+        <span class="k">if</span> <span class="n">priority</span> <span class="o">&gt;=</span> <span class="n">SourcePriority</span><span class="o">.</span><span class="n">MANUAL</span><span class="p">:</span>
+            <span class="k">continue</span>
+        <span class="n">propertiesClash</span> <span class="o">=</span> <span class="nb">any</span><span class="p">(</span>
+            <span class="nb">getattr</span><span class="p">(</span><span class="n">availableSources</span><span class="p">[</span><span class="n">sourceName</span><span class="p">],</span> <span class="n">k</span><span class="p">,</span> <span class="kc">False</span><span class="p">)</span> <span class="o">!=</span> <span class="n">v</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">properties</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
+        <span class="n">sourceList</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">propertiesClash</span><span class="p">,</span> <span class="n">priority</span><span class="p">,</span> <span class="n">sourceName</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">_clash</span><span class="p">,</span> <span class="n">_priority</span><span class="p">,</span> <span class="n">sourceName</span> <span class="ow">in</span> <span class="nb">sorted</span><span class="p">(</span><span class="n">sourceList</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">availableSources</span><span class="p">[</span><span class="n">sourceName</span><span class="p">]</span><span class="o">.</span><span class="n">canRead</span><span class="p">(</span><span class="n">pathOrUri</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+            <span class="k">return</span> <span class="n">sourceName</span></div>
+
+
+<span class="k">def</span> <span class="nf">getTileSourceFromDict</span><span class="p">(</span><span class="n">availableSources</span><span class="p">,</span> <span class="n">pathOrUri</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get a tile source based on a ordered dictionary of known sources and a path</span>
+<span class="sd">    name or URI.  Additional parameters are passed to the tile source and can</span>
+<span class="sd">    be used for properties such as encoding.</span>
+
+<span class="sd">    :param availableSources: an ordered dictionary of sources to try.</span>
+<span class="sd">    :param pathOrUri: either a file path or a fixed source via</span>
+<span class="sd">        large_image://&lt;source&gt;.</span>
+<span class="sd">    :returns: a tile source instance or and error.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">sourceName</span> <span class="o">=</span> <span class="n">getSourceNameFromDict</span><span class="p">(</span><span class="n">availableSources</span><span class="p">,</span> <span class="n">pathOrUri</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">sourceName</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">availableSources</span><span class="p">[</span><span class="n">sourceName</span><span class="p">](</span><span class="n">pathOrUri</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+    <span class="k">raise</span> <span class="n">TileSourceException</span><span class="p">(</span><span class="s1">&#39;No available tilesource for </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">pathOrUri</span><span class="p">)</span>
+
+
+<div class="viewcode-block" id="getTileSource"><a class="viewcode-back" href="../../large_image/large_image.tilesource.html#large_image.tilesource.getTileSource">[docs]</a><span class="k">def</span> <span class="nf">getTileSource</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get a tilesource using the known sources.  If tile sources have not yet</span>
+<span class="sd">    been loaded, load them.</span>
+
+<span class="sd">    :returns: A tilesource for the passed arguments.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">AvailableTileSources</span><span class="p">):</span>
+        <span class="n">loadTileSources</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">getTileSourceFromDict</span><span class="p">(</span><span class="n">AvailableTileSources</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="canRead"><a class="viewcode-back" href="../../large_image/large_image.tilesource.html#large_image.tilesource.canRead">[docs]</a><span class="k">def</span> <span class="nf">canRead</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if large_image can read a path or uri.</span>
+
+<span class="sd">    :returns: True if any appropriate source reports it can read the path or</span>
+<span class="sd">        uri.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="nb">len</span><span class="p">(</span><span class="n">AvailableTileSources</span><span class="p">):</span>
+        <span class="n">loadTileSources</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">getSourceNameFromDict</span><span class="p">(</span><span class="n">AvailableTileSources</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="kc">False</span></div>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;TileSource&#39;</span><span class="p">,</span> <span class="s1">&#39;FileTileSource&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;exceptions&#39;</span><span class="p">,</span> <span class="s1">&#39;TileGeneralException&#39;</span><span class="p">,</span> <span class="s1">&#39;TileSourceException&#39;</span><span class="p">,</span> <span class="s1">&#39;TileSourceAssetstoreException&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;TileOutputMimeTypes&#39;</span><span class="p">,</span> <span class="s1">&#39;TILE_FORMAT_IMAGE&#39;</span><span class="p">,</span> <span class="s1">&#39;TILE_FORMAT_PIL&#39;</span><span class="p">,</span> <span class="s1">&#39;TILE_FORMAT_NUMPY&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;AvailableTileSources&#39;</span><span class="p">,</span> <span class="s1">&#39;getTileSource&#39;</span><span class="p">,</span> <span class="s1">&#39;canRead&#39;</span><span class="p">,</span> <span class="s1">&#39;getSourceNameFromDict&#39;</span><span class="p">,</span> <span class="s1">&#39;nearPowerOfTwo&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;etreeToDict&#39;</span><span class="p">,</span> <span class="s1">&#39;dictToEtree&#39;</span><span class="p">,</span>
+<span class="p">]</span>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Kitware, Inc..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

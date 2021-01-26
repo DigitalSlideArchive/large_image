@@ -1,0 +1,517 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>large_image_source_gdal package &mdash; large_image  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="large_image_source_mapnik" href="../large_image_source_mapnik/modules.html" />
+    <link rel="prev" title="large_image_source_gdal" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> large_image
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tilesource_options.html">Tile Source Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image/modules.html">large_image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_dummy/modules.html">large_image_source_dummy</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">large_image_source_gdal</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">large_image_source_gdal package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-large_image_source_gdal.girder_source">large_image_source_gdal.girder_source module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-large_image_source_gdal">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_mapnik/modules.html">large_image_source_mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_nd2/modules.html">large_image_source_nd2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_ometiff/modules.html">large_image_source_ometiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_openjpeg/modules.html">large_image_source_openjpeg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_openslide/modules.html">large_image_source_openslide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_pil/modules.html">large_image_source_pil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_test/modules.html">large_image_source_test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_tiff/modules.html">large_image_source_tiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_converter/modules.html">large_image_converter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_tasks/modules.html">large_image_tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../girder_large_image/modules.html">girder_large_image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../girder_large_image_annotation/modules.html">girder_large_image_annotation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">large_image</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">large_image_source_gdal</a> &raquo;</li>
+        
+      <li>large_image_source_gdal package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/large_image_source_gdal/large_image_source_gdal.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="large-image-source-gdal-package">
+<h1>large_image_source_gdal package<a class="headerlink" href="#large-image-source-gdal-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-large_image_source_gdal.girder_source">
+<span id="large-image-source-gdal-girder-source-module"></span><h2>large_image_source_gdal.girder_source module<a class="headerlink" href="#module-large_image_source_gdal.girder_source" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="large_image_source_gdal.girder_source.GDALGirderTileSource">
+<em class="property">class </em><code class="sig-prename descclassname">large_image_source_gdal.girder_source.</code><code class="sig-name descname">GDALGirderTileSource</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal/girder_source.html#GDALGirderTileSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.girder_source.GDALGirderTileSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#large_image_source_gdal.GDALFileTileSource" title="large_image_source_gdal.GDALFileTileSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">large_image_source_gdal.GDALFileTileSource</span></code></a>, <a class="reference internal" href="../girder_large_image/girder_large_image.html#girder_large_image.girder_tilesource.GirderTileSource" title="girder_large_image.girder_tilesource.GirderTileSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">girder_large_image.girder_tilesource.GirderTileSource</span></code></a></p>
+<p>Provides tile access to Girder items for gdal layers.</p>
+<dl class="py attribute">
+<dt id="large_image_source_gdal.girder_source.GDALGirderTileSource.cacheName">
+<code class="sig-name descname">cacheName</code><em class="property"> = 'tilesource'</em><a class="headerlink" href="#large_image_source_gdal.girder_source.GDALGirderTileSource.cacheName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.girder_source.GDALGirderTileSource.getLRUHash">
+<em class="property">static </em><code class="sig-name descname">getLRUHash</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal/girder_source.html#GDALGirderTileSource.getLRUHash"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.girder_source.GDALGirderTileSource.getLRUHash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="large_image_source_gdal.girder_source.GDALGirderTileSource.name">
+<code class="sig-name descname">name</code><em class="property"> = 'gdal'</em><a class="headerlink" href="#large_image_source_gdal.girder_source.GDALGirderTileSource.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-large_image_source_gdal">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-large_image_source_gdal" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="large_image_source_gdal.GDALFileTileSource">
+<em class="property">class </em><code class="sig-prename descclassname">large_image_source_gdal.</code><code class="sig-name descname">GDALFileTileSource</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="../large_image/large_image.tilesource.html#large_image.tilesource.base.FileTileSource" title="large_image.tilesource.base.FileTileSource"><code class="xref py py-class docutils literal notranslate"><span class="pre">large_image.tilesource.base.FileTileSource</span></code></a></p>
+<p>Provides tile access to geospatial files.</p>
+<dl class="py attribute">
+<dt id="large_image_source_gdal.GDALFileTileSource.cacheName">
+<code class="sig-name descname">cacheName</code><em class="property"> = 'tilesource'</em><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.cacheName" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="large_image_source_gdal.GDALFileTileSource.extensions">
+<code class="sig-name descname">extensions</code><em class="property"> = {None: 4, 'ntf': 1, 'nitf': 1, 'tif': 5, 'tiff': 5, 'vrt': 1}</em><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.extensions" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="large_image_source_gdal.GDALFileTileSource.geospatial">
+<code class="sig-name descname">geospatial</code><em class="property"> = True</em><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.geospatial" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getBandInformation">
+<code class="sig-name descname">getBandInformation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dataset</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getBandInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getBandInformation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getBounds">
+<code class="sig-name descname">getBounds</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">srs</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getBounds"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getBounds" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns bounds of the image.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>srs</strong> – the projection for the bounds.  None for the default.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>an object with the four corners and the projection that was
+used.  None if we don’t know the original projection.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getHexColors">
+<em class="property">static </em><code class="sig-name descname">getHexColors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">palette</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getHexColors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getHexColors" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns list of hex colors for a given color palette</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>List of colors</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getInternalMetadata">
+<code class="sig-name descname">getInternalMetadata</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getInternalMetadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getInternalMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return additional known metadata about the tile source.  Data returned
+from this method is not guaranteed to be in any particular format or
+have specific values.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a dictionary of data or None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getLRUHash">
+<em class="property">static </em><code class="sig-name descname">getLRUHash</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">*</span><span class="n">args</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getLRUHash"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getLRUHash" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getMetadata">
+<code class="sig-name descname">getMetadata</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getMetadata"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getMetadata" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return metadata about this tile source.  In addition to the keys that
+are listed in this template function, tile sources that expose multiple
+frames will also contain:
+- frames: a list of frames.  Each frame entry is a dictionary with</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Frame: a 0-values frame index (the location in the list)</p></li>
+<li><p>Channel (optional): the name of the channel, if known</p></li>
+<li><p>IndexC (optional if unique): a 0-based index into the channel list</p></li>
+<li><p>IndexT (optional if unique): a 0-based index for time values</p></li>
+<li><p>IndexZ (optional if unique): a 0-based index for z values</p></li>
+<li><p>IndexXY (optional if unique): a 0-based index for view (xy) values</p></li>
+<li><dl class="simple">
+<dt>Index: a 0-based index of non-channel unique sets.  If the frames</dt><dd><p>vary only by channel and are adjacent, they will have the same
+index.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<ul class="simple">
+<li><dl class="simple">
+<dt>IndexRange: a dictionary of the number of unique index values from</dt><dd><p>frames if greater than 1 (e.g., if an entry like IndexXY is not
+present, then all frames either do not have that value or have a
+value of 0).</p>
+</dd>
+</dl>
+</li>
+<li><p>channels (optional): if known, a list of channel names</p></li>
+<li><dl class="simple">
+<dt>channelmap (optional): if known, a dictionary of channel names with</dt><dd><p>their offset into the channel list.</p>
+</dd>
+</dl>
+</li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getNativeMagnification">
+<code class="sig-name descname">getNativeMagnification</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getNativeMagnification"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getNativeMagnification" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the magnification at the base level.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>width of a pixel in mm, height of a pixel in mm.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getOneBandInformation">
+<code class="sig-name descname">getOneBandInformation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">band</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getOneBandInformation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getOneBandInformation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getPixel">
+<code class="sig-name descname">getPixel</code><span class="sig-paren">(</span><em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getPixel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getPixel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a single pixel from the current tile source.
+:param <a href="#id1"><span class="problematic" id="id2">**</span></a>kwargs: optional arguments.  Some options are region, output,</p>
+<blockquote>
+<div><p>encoding, jpegQuality, jpegSubsampling, tiffCompression, fill.  See
+tileIterator.</p>
+</div></blockquote>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>a dictionary with the value of the pixel for each channel on
+a scale of [0-255], including alpha, if available.  This may
+contain additional information.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getPixelSizeInMeters">
+<code class="sig-name descname">getPixelSizeInMeters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getPixelSizeInMeters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getPixelSizeInMeters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get the approximate base pixel size in meters.  This is calculated as
+the average scale of the four edges in the WGS84 ellipsoid.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>the pixel size in meters or None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getProj4String">
+<code class="sig-name descname">getProj4String</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getProj4String"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getProj4String" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns proj4 string for the given dataset</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>The proj4 string or None.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getState">
+<code class="sig-name descname">getState</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getState"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getState" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getThumbnail">
+<code class="sig-name descname">getThumbnail</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">width</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">height</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">levelZero</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getThumbnail"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getThumbnail" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a basic thumbnail from the current tile source.  Aspect ratio is
+preserved.  If neither width nor height is given, a default value is
+used.  If both are given, the thumbnail will be no larger than either
+size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>width</strong> – maximum width in pixels.</p></li>
+<li><p><strong>height</strong> – maximum height in pixels.</p></li>
+<li><p><strong>levelZero</strong> – if true, always use the level zero tile.  Otherwise,
+the thumbnail is generated so that it is never upsampled.</p></li>
+<li><p><strong>**kwargs</strong> – <p>optional arguments.  Some options are encoding,
+jpegQuality, jpegSubsampling, and tiffCompression.</p>
+</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>thumbData, thumbMime: the image data and the mime type.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getTile">
+<code class="sig-name descname">getTile</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">z</span></em>, <em class="sig-param"><span class="n">pilImageAllowed</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">numpyAllowed</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getTile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getTile" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.getTileCorners">
+<code class="sig-name descname">getTileCorners</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">z</span></em>, <em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.getTileCorners"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.getTileCorners" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns bounds of a tile for a given x,y,z index.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>z</strong> – tile level</p></li>
+<li><p><strong>x</strong> – tile offset from left.</p></li>
+<li><p><strong>y</strong> – tile offset from right</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(xmin, ymin, xmax, ymax) in the current projection or base
+pixels.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="large_image_source_gdal.GDALFileTileSource.mimeTypes">
+<code class="sig-name descname">mimeTypes</code><em class="property"> = {None: 7, 'image/geotiff': 1, 'image/tiff': 5, 'image/x-tiff': 5}</em><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.mimeTypes" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt id="large_image_source_gdal.GDALFileTileSource.name">
+<code class="sig-name descname">name</code><em class="property"> = 'gdalfile'</em><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.name" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="large_image_source_gdal.GDALFileTileSource.toNativePixelCoordinates">
+<code class="sig-name descname">toNativePixelCoordinates</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em>, <em class="sig-param"><span class="n">y</span></em>, <em class="sig-param"><span class="n">proj</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">roundResults</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/large_image_source_gdal.html#GDALFileTileSource.toNativePixelCoordinates"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#large_image_source_gdal.GDALFileTileSource.toNativePixelCoordinates" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a coordinate in the native projection (self.getProj4String) to
+pixel coordinates.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>x</strong> – the x coordinate it the native projection.</p></li>
+<li><p><strong>y</strong> – the y coordinate it the native projection.</p></li>
+<li><p><strong>proj</strong> – input projection.  None to use the sources’s projection.</p></li>
+<li><p><strong>roundResults</strong> – if True, round the results to the nearest pixel.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(x, y) the pixel coordinate.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../large_image_source_mapnik/modules.html" class="btn btn-neutral float-right" title="large_image_source_mapnik" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="modules.html" class="btn btn-neutral float-left" title="large_image_source_gdal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Kitware, Inc..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

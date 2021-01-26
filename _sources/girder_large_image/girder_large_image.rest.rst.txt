@@ -1,0 +1,29 @@
+girder\_large\_image.rest package
+=================================
+
+Submodules
+----------
+
+girder\_large\_image.rest.large\_image\_resource module
+-------------------------------------------------------
+
+.. automodule:: girder_large_image.rest.large_image_resource
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+girder\_large\_image.rest.tiles module
+--------------------------------------
+
+.. automodule:: girder_large_image.rest.tiles
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: girder_large_image.rest
+   :members:
+   :undoc-members:
+   :show-inheritance:

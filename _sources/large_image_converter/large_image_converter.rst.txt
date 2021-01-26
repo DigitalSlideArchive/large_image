@@ -1,0 +1,10 @@
+large\_image\_converter package
+===============================
+
+Module contents
+---------------
+
+.. automodule:: large_image_converter
+   :members:
+   :undoc-members:
+   :show-inheritance:

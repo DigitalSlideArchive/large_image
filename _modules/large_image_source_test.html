@@ -1,0 +1,398 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>large_image_source_test &mdash; large_image  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> large_image
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tilesource_options.html">Tile Source Options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image/modules.html">large_image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_dummy/modules.html">large_image_source_dummy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_gdal/modules.html">large_image_source_gdal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_mapnik/modules.html">large_image_source_mapnik</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_nd2/modules.html">large_image_source_nd2</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_ometiff/modules.html">large_image_source_ometiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_openjpeg/modules.html">large_image_source_openjpeg</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_openslide/modules.html">large_image_source_openslide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_pil/modules.html">large_image_source_pil</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_test/modules.html">large_image_source_test</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_source_tiff/modules.html">large_image_source_tiff</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_converter/modules.html">large_image_converter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large_image_tasks/modules.html">large_image_tasks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../girder_large_image/modules.html">girder_large_image</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../girder_large_image_annotation/modules.html">girder_large_image_annotation</a></li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">large_image</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="index.html">Module code</a> &raquo;</li>
+        
+      <li>large_image_source_test</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for large_image_source_test</h1><div class="highlight"><pre>
+<span></span><span class="c1"># -*- coding: utf-8 -*-</span>
+
+<span class="c1">##############################################################################</span>
+<span class="c1">#  Copyright Kitware Inc.</span>
+<span class="c1">#</span>
+<span class="c1">#  Licensed under the Apache License, Version 2.0 ( the &quot;License&quot; );</span>
+<span class="c1">#  you may not use this file except in compliance with the License.</span>
+<span class="c1">#  You may obtain a copy of the License at</span>
+<span class="c1">#</span>
+<span class="c1">#    http://www.apache.org/licenses/LICENSE-2.0</span>
+<span class="c1">#</span>
+<span class="c1">#  Unless required by applicable law or agreed to in writing, software</span>
+<span class="c1">#  distributed under the License is distributed on an &quot;AS IS&quot; BASIS,</span>
+<span class="c1">#  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span>
+<span class="c1">#  See the License for the specific language governing permissions and</span>
+<span class="c1">#  limitations under the License.</span>
+<span class="c1">##############################################################################</span>
+
+<span class="kn">import</span> <span class="nn">colorsys</span>
+<span class="kn">import</span> <span class="nn">six</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageDraw</span><span class="p">,</span> <span class="n">ImageFont</span>
+<span class="kn">from</span> <span class="nn">pkg_resources</span> <span class="kn">import</span> <span class="n">DistributionNotFound</span><span class="p">,</span> <span class="n">get_distribution</span>
+
+<span class="kn">from</span> <span class="nn">large_image.constants</span> <span class="kn">import</span> <span class="n">SourcePriority</span><span class="p">,</span> <span class="n">TILE_FORMAT_PIL</span>
+<span class="kn">from</span> <span class="nn">large_image.cache_util</span> <span class="kn">import</span> <span class="n">strhash</span><span class="p">,</span> <span class="n">methodcache</span><span class="p">,</span> <span class="n">LruCacheMetaclass</span>
+<span class="kn">from</span> <span class="nn">large_image.exceptions</span> <span class="kn">import</span> <span class="n">TileSourceException</span>
+<span class="kn">from</span> <span class="nn">large_image.tilesource</span> <span class="kn">import</span> <span class="n">TileSource</span>
+
+
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">__version__</span> <span class="o">=</span> <span class="n">get_distribution</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span><span class="o">.</span><span class="n">version</span>
+<span class="k">except</span> <span class="n">DistributionNotFound</span><span class="p">:</span>
+    <span class="c1"># package is not installed</span>
+    <span class="k">pass</span>
+
+
+<span class="n">_counters</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s1">&#39;tiles&#39;</span><span class="p">:</span> <span class="mi">0</span>
+<span class="p">}</span>
+
+
+<div class="viewcode-block" id="TestTileSource"><a class="viewcode-back" href="../large_image_source_test/large_image_source_test.html#large_image_source_test.TestTileSource">[docs]</a><span class="nd">@six</span><span class="o">.</span><span class="n">add_metaclass</span><span class="p">(</span><span class="n">LruCacheMetaclass</span><span class="p">)</span>
+<span class="k">class</span> <span class="nc">TestTileSource</span><span class="p">(</span><span class="n">TileSource</span><span class="p">):</span>
+    <span class="n">cacheName</span> <span class="o">=</span> <span class="s1">&#39;tilesource&#39;</span>
+    <span class="n">name</span> <span class="o">=</span> <span class="s1">&#39;test&#39;</span>
+    <span class="n">extensions</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="kc">None</span><span class="p">:</span> <span class="n">SourcePriority</span><span class="o">.</span><span class="n">MANUAL</span>
+    <span class="p">}</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ignored_path</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">minLevel</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">maxLevel</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span>
+                 <span class="n">tileWidth</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">tileHeight</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span> <span class="n">sizeX</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">sizeY</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+                 <span class="n">fractal</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Initialize the tile class.  See the base class for other available</span>
+<span class="sd">        parameters.</span>
+
+<span class="sd">        :param ignored_path: for compatibility with FileTileSource.</span>
+<span class="sd">        :param minLevel: minimum tile level</span>
+<span class="sd">        :param maxLevel: maximum tile level</span>
+<span class="sd">        :param tileWidth: tile width in pixels</span>
+<span class="sd">        :param tileHeight: tile height in pixels</span>
+<span class="sd">        :param sizeX: image width in pixels at maximum level.  Computed from</span>
+<span class="sd">            maxLevel and tileWidth if None.</span>
+<span class="sd">        :param sizeY: image height in pixels at maximum level.  Computer from</span>
+<span class="sd">            maxLevel and tileHeight if None.</span>
+<span class="sd">        :param fractal: if True, and the tile size is square and a power of</span>
+<span class="sd">            two, draw a simple fractal on the tiles.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;encoding&#39;</span><span class="p">):</span>
+            <span class="n">kwargs</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+            <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;encoding&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;PNG&#39;</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">TestTileSource</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">minLevel</span> <span class="o">=</span> <span class="n">minLevel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">maxLevel</span> <span class="o">=</span> <span class="n">maxLevel</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span> <span class="o">=</span> <span class="n">tileWidth</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">tileHeight</span> <span class="o">=</span> <span class="n">tileHeight</span>
+        <span class="c1"># Don&#39;t generate a fractal tile if the tile isn&#39;t square or not a power</span>
+        <span class="c1"># of 2 in size.</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">fractal</span> <span class="o">=</span> <span class="p">(</span><span class="n">fractal</span> <span class="ow">and</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileHeight</span> <span class="ow">and</span>
+                        <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span> <span class="o">&amp;</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sizeX</span> <span class="o">=</span> <span class="p">(((</span><span class="mi">2</span> <span class="o">**</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxLevel</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span><span class="p">)</span>
+                      <span class="k">if</span> <span class="n">sizeX</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">sizeX</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">sizeY</span> <span class="o">=</span> <span class="p">(((</span><span class="mi">2</span> <span class="o">**</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxLevel</span><span class="p">)</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileHeight</span><span class="p">)</span>
+                      <span class="k">if</span> <span class="n">sizeY</span> <span class="ow">is</span> <span class="kc">None</span> <span class="k">else</span> <span class="n">sizeY</span><span class="p">)</span>
+        <span class="c1"># Used for reporting tile information</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">levels</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxLevel</span> <span class="o">+</span> <span class="mi">1</span>
+
+<div class="viewcode-block" id="TestTileSource.canRead"><a class="viewcode-back" href="../large_image_source_test/large_image_source_test.html#large_image_source_test.TestTileSource.canRead">[docs]</a>    <span class="nd">@classmethod</span>
+    <span class="k">def</span> <span class="nf">canRead</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="kc">True</span></div>
+
+<div class="viewcode-block" id="TestTileSource.fractalTile"><a class="viewcode-back" href="../large_image_source_test/large_image_source_test.html#large_image_source_test.TestTileSource.fractalTile">[docs]</a>    <span class="k">def</span> <span class="nf">fractalTile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">image</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">widthCount</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)):</span>
+        <span class="n">imageDraw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+        <span class="n">x</span> <span class="o">*=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span>
+        <span class="n">y</span> <span class="o">*=</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileHeight</span>
+        <span class="n">sq</span> <span class="o">=</span> <span class="n">widthCount</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span>
+        <span class="k">while</span> <span class="n">sq</span> <span class="o">&gt;=</span> <span class="mi">4</span><span class="p">:</span>
+            <span class="n">sq1</span> <span class="o">=</span> <span class="n">sq</span> <span class="o">//</span> <span class="mi">4</span>
+            <span class="n">sq2</span> <span class="o">=</span> <span class="n">sq1</span> <span class="o">+</span> <span class="n">sq</span> <span class="o">//</span> <span class="mi">2</span>
+            <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">y</span> <span class="o">%</span> <span class="n">sq</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span><span class="p">,</span> <span class="n">sq</span><span class="p">):</span>
+                <span class="k">if</span> <span class="n">t</span> <span class="o">+</span> <span class="n">sq1</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span> <span class="ow">and</span> <span class="n">t</span> <span class="o">+</span> <span class="n">sq2</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                    <span class="k">for</span> <span class="n">l</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">%</span> <span class="n">sq</span><span class="p">),</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span><span class="p">,</span> <span class="n">sq</span><span class="p">):</span>
+                        <span class="k">if</span> <span class="n">l</span> <span class="o">+</span> <span class="n">sq1</span> <span class="o">&lt;</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span> <span class="ow">and</span> <span class="n">l</span> <span class="o">+</span> <span class="n">sq2</span> <span class="o">&gt;=</span> <span class="mi">0</span><span class="p">:</span>
+                            <span class="n">imageDraw</span><span class="o">.</span><span class="n">rectangle</span><span class="p">([</span>
+                                <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">l</span> <span class="o">+</span> <span class="n">sq1</span><span class="p">),</span> <span class="nb">max</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="n">sq1</span><span class="p">),</span>
+                                <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span><span class="p">,</span> <span class="n">l</span> <span class="o">+</span> <span class="n">sq2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span>
+                                <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span><span class="p">,</span> <span class="n">t</span> <span class="o">+</span> <span class="n">sq2</span> <span class="o">-</span> <span class="mi">1</span><span class="p">),</span>
+                            <span class="p">],</span> <span class="n">color</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+            <span class="n">sq</span> <span class="o">//=</span> <span class="mi">2</span></div>
+
+<div class="viewcode-block" id="TestTileSource.getInternalMetadata"><a class="viewcode-back" href="../large_image_source_test/large_image_source_test.html#large_image_source_test.TestTileSource.getInternalMetadata">[docs]</a>    <span class="k">def</span> <span class="nf">getInternalMetadata</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Return additional known metadata about the tile source.  Data returned</span>
+<span class="sd">        from this method is not guaranteed to be in any particular format or</span>
+<span class="sd">        have specific values.</span>
+
+<span class="sd">        :returns: a dictionary of data or None.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">return</span> <span class="p">{</span><span class="s1">&#39;fractal&#39;</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">fractal</span><span class="p">}</span></div>
+
+<div class="viewcode-block" id="TestTileSource.getTile"><a class="viewcode-back" href="../large_image_source_test/large_image_source_test.html#large_image_source_test.TestTileSource.getTile">[docs]</a>    <span class="nd">@methodcache</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">getTile</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="n">widthCount</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">**</span> <span class="n">z</span>
+
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sizeX</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">**</span> <span class="p">(</span>
+                <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxLevel</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="n">TileSourceException</span><span class="p">(</span><span class="s1">&#39;x is outside layer&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="mi">0</span> <span class="o">&lt;=</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sizeY</span><span class="p">)</span> <span class="o">/</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileHeight</span> <span class="o">*</span> <span class="mi">2</span> <span class="o">**</span> <span class="p">(</span>
+                <span class="n">z</span> <span class="o">-</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxLevel</span><span class="p">)):</span>
+            <span class="k">raise</span> <span class="n">TileSourceException</span><span class="p">(</span><span class="s1">&#39;y is outside layer&#39;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">minLevel</span> <span class="o">&lt;=</span> <span class="n">z</span> <span class="o">&lt;=</span> <span class="bp">self</span><span class="o">.</span><span class="n">maxLevel</span><span class="p">):</span>
+            <span class="k">raise</span> <span class="n">TileSourceException</span><span class="p">(</span><span class="s1">&#39;z layer does not exist&#39;</span><span class="p">)</span>
+
+        <span class="n">xFraction</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">widthCount</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">z</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+        <span class="n">yFraction</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="n">y</span><span class="p">)</span> <span class="o">/</span> <span class="p">(</span><span class="n">widthCount</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">z</span> <span class="o">!=</span> <span class="mi">0</span> <span class="k">else</span> <span class="mi">0</span>
+
+        <span class="n">backgroundColor</span> <span class="o">=</span> <span class="n">colorsys</span><span class="o">.</span><span class="n">hsv_to_rgb</span><span class="p">(</span>
+            <span class="n">h</span><span class="o">=</span><span class="p">(</span><span class="mf">0.9</span> <span class="o">*</span> <span class="n">xFraction</span><span class="p">),</span>
+            <span class="n">s</span><span class="o">=</span><span class="p">(</span><span class="mf">0.3</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.7</span> <span class="o">*</span> <span class="n">yFraction</span><span class="p">)),</span>
+            <span class="n">v</span><span class="o">=</span><span class="p">(</span><span class="mf">0.3</span> <span class="o">+</span> <span class="p">(</span><span class="mf">0.7</span> <span class="o">*</span> <span class="n">yFraction</span><span class="p">)),</span>
+        <span class="p">)</span>
+        <span class="n">rgbColor</span> <span class="o">=</span> <span class="nb">tuple</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">val</span> <span class="o">*</span> <span class="mi">255</span><span class="p">)</span> <span class="k">for</span> <span class="n">val</span> <span class="ow">in</span> <span class="n">backgroundColor</span><span class="p">)</span>
+
+        <span class="n">image</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">new</span><span class="p">(</span>
+            <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;RGB&#39;</span><span class="p">,</span>
+            <span class="n">size</span><span class="o">=</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileHeight</span><span class="p">),</span>
+            <span class="n">color</span><span class="o">=</span><span class="p">(</span><span class="n">rgbColor</span> <span class="k">if</span> <span class="ow">not</span> <span class="bp">self</span><span class="o">.</span><span class="n">fractal</span> <span class="k">else</span> <span class="p">(</span><span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mi">255</span><span class="p">))</span>
+        <span class="p">)</span>
+        <span class="n">imageDraw</span> <span class="o">=</span> <span class="n">ImageDraw</span><span class="o">.</span><span class="n">Draw</span><span class="p">(</span><span class="n">image</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">fractal</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">fractalTile</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">widthCount</span><span class="p">,</span> <span class="n">rgbColor</span><span class="p">)</span>
+
+        <span class="k">try</span><span class="p">:</span>
+            <span class="c1"># the font size should fill the whole tile</span>
+            <span class="n">imageDrawFont</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">truetype</span><span class="p">(</span>
+                <span class="n">font</span><span class="o">=</span><span class="s1">&#39;/usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf&#39;</span><span class="p">,</span>
+                <span class="n">size</span><span class="o">=</span><span class="nb">int</span><span class="p">(</span><span class="mf">0.15</span> <span class="o">*</span> <span class="nb">min</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileHeight</span><span class="p">))</span>
+            <span class="p">)</span>
+        <span class="k">except</span> <span class="ne">IOError</span><span class="p">:</span>
+            <span class="n">imageDrawFont</span> <span class="o">=</span> <span class="n">ImageFont</span><span class="o">.</span><span class="n">load_default</span><span class="p">()</span>
+        <span class="n">imageDraw</span><span class="o">.</span><span class="n">multiline_text</span><span class="p">(</span>
+            <span class="n">xy</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
+            <span class="n">text</span><span class="o">=</span><span class="s1">&#39;x=</span><span class="si">%d</span><span class="se">\n</span><span class="s1">y=</span><span class="si">%d</span><span class="se">\n</span><span class="s1">z=</span><span class="si">%d</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">),</span>
+            <span class="n">fill</span><span class="o">=</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">),</span>
+            <span class="n">font</span><span class="o">=</span><span class="n">imageDrawFont</span>
+        <span class="p">)</span>
+        <span class="n">_counters</span><span class="p">[</span><span class="s1">&#39;tiles&#39;</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_outputTile</span><span class="p">(</span><span class="n">image</span><span class="p">,</span> <span class="n">TILE_FORMAT_PIL</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="TestTileSource.getLRUHash"><a class="viewcode-back" href="../large_image_source_test/large_image_source_test.html#large_image_source_test.TestTileSource.getLRUHash">[docs]</a>    <span class="nd">@staticmethod</span>
+    <span class="k">def</span> <span class="nf">getLRUHash</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">strhash</span><span class="p">(</span>
+            <span class="nb">super</span><span class="p">(</span><span class="n">TestTileSource</span><span class="p">,</span> <span class="n">TestTileSource</span><span class="p">)</span><span class="o">.</span><span class="n">getLRUHash</span><span class="p">(</span>
+                <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">),</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;minLevel&#39;</span><span class="p">),</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;maxLevel&#39;</span><span class="p">),</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tileWidth&#39;</span><span class="p">),</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;tileHeight&#39;</span><span class="p">),</span>
+            <span class="n">kwargs</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;fractal&#39;</span><span class="p">))</span></div>
+
+<div class="viewcode-block" id="TestTileSource.getState"><a class="viewcode-back" href="../large_image_source_test/large_image_source_test.html#large_image_source_test.TestTileSource.getState">[docs]</a>    <span class="k">def</span> <span class="nf">getState</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="s1">&#39;test </span><span class="si">%r</span><span class="s1"> </span><span class="si">%r</span><span class="s1"> </span><span class="si">%r</span><span class="s1"> </span><span class="si">%r</span><span class="s1"> </span><span class="si">%r</span><span class="s1"> </span><span class="si">%r</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="p">(</span>
+            <span class="nb">super</span><span class="p">(</span><span class="n">TestTileSource</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">getState</span><span class="p">(),</span> <span class="bp">self</span><span class="o">.</span><span class="n">minLevel</span><span class="p">,</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">maxLevel</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileWidth</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tileHeight</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">fractal</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright Kitware, Inc..
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
